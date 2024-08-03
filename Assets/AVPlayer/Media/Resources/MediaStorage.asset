@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mediaFiles:
   - _preview: {fileID: 21300000, guid: 3169693aff4221940afe55d9fa204fab, type: 3}
-    _media: {fileID: 11400000, guid: 59dab8d465c97fd4698f719f4ccf1ad8, type: 2}
+    _media: {fileID: 11400000, guid: 0d5c64d676ea1af489fedd6d0399669a, type: 2}
     _name: "\u0421\u0432\u0438\u043D\u043A\u0430 \u041F\u0435\u043F\u043F\u0430 14.
       \u041C\u043E\u044F \u0434\u0432\u043E\u044E\u0440\u043E\u0434\u043D\u0430\u044F
       \u0441\u0435\u0441\u0442\u0440\u0430 \u0425\u043B\u043E\u044F"
   - _preview: {fileID: 21300000, guid: cfc78caa3edeba441911579e868719f4, type: 3}
-    _media: {fileID: 11400000, guid: 8fbc8a0c87670cd439e86ecfa328694c, type: 2}
+    _media: {fileID: 11400000, guid: 3daa57072b740ab4ba758bbe4ec91d10, type: 2}
     _name: "\u0421\u0432\u0438\u043D\u043A\u0430 \u041F\u0435\u043F\u043F\u0430 15.
       \u041F\u0430\u043F\u0430 \u043F\u043E\u0442\u0435\u0440\u044F\u043B \u043E\u0447\u043A\u0438"
   - _preview: {fileID: 21300000, guid: 222e9c5c4cf543347baac4d22be0d572, type: 3}
-    _media: {fileID: 11400000, guid: acafd3345c00a264bb9857764680dccd, type: 2}
+    _media: {fileID: 11400000, guid: 8c2b2e110d5ff9e43ba42768dde7cfde, type: 2}
     _name: "\u0421\u0432\u0438\u043D\u043A\u0430 \u041F\u0435\u043F\u043F\u0430 18.
       \u0414\u0435\u043D\u044C \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F \u043C\u0430\u043C\u044B
       \u0421\u0432\u0438\u043D\u043A\u0438"

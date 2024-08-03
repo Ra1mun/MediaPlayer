@@ -27,7 +27,7 @@ namespace AVPlayer.Media
             _tickableManager = tickableManager;
         }
         
-        public bool TryToLoadVideo(string videoName)
+        public bool TryToLoadVideo(string videoName, bool autoPlay = false)
         {
             var video = _mediaStorage.GetVideo(videoName);
             if (video == null)
@@ -36,9 +36,12 @@ namespace AVPlayer.Media
                 return false;
             }
             
-            _mediaPlayer.OpenMedia(video, false);
-            VideoLoaded?.Invoke();
-            SetStateVideo(false);
+            _mediaPlayer.OpenMedia(video, autoPlay);
+            if (!autoPlay)
+            {
+                VideoLoaded?.Invoke();
+                SetStateVideo(false);
+            }
             return true;
         }
 
@@ -46,7 +49,7 @@ namespace AVPlayer.Media
         {
             if (_mediaPlayer.MediaReference == null)
             {
-                TryToLoadVideo(_mediaStorage.GetNames().First());
+                TryToLoadVideo(_mediaStorage.GetNames().First(), true);
             }
             SetStateVideo(true);
             
