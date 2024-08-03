@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AVPlayer.UI.Display
 {
-    public class DisplayRoot : MonoBehaviour, IDisplayRoot
+    public class DisplayRoot : MonoBehaviour
     {
         [SerializeField] private DisplayUGUI _display;
         [SerializeField] private TMP_Text _header;

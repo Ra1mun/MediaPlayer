@@ -7,17 +7,18 @@ public class MediaInstaller : Installer<MediaInstaller>
     public override void InstallBindings()
     {
         Container
+            .Bind<MediaPlayer>()
+            .FromComponentInNewPrefabResource(nameof(MediaPlayer))
+            .AsSingle();
+        
+        Container
             .Bind<MediaStorage>()
             .FromScriptableObjectResource(nameof(MediaStorage))
             .AsSingle();
         
         Container
-            .Bind<MediaPlayer>()
-            .FromComponentInNewPrefabResource(nameof(MediaPlayer))
-            .AsSingle();
-
-        Container
             .Bind<MediaController>()
-            .AsSingle();
+            .AsSingle()
+            .NonLazy();
     }
 }

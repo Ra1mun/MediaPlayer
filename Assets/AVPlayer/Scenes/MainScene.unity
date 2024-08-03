@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,74 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &1055892893
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7009035681352968082, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_Name
-      value: CameraView
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409833602248424286, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409833602248424286, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409833602248424286, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409833602248424286, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409833602248424286, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409833602248424286, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409833602248424286, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409833602248424286, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409833602248424286, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7409833602248424286, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
---- !u!114 &1259681495 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3679220198693764803, guid: 84391d867e065c74eafaf8180ffb28ee, type: 3}
-  m_PrefabInstance: {fileID: 1055892893}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558dcfa7ee4c8ac49b82d318d07d087f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1646902197
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e6b5e743af81d468d3d6a7fb02c3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraView: {fileID: 1259681495}
 --- !u!114 &1646902199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,4 +205,3 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1646902200}
-  - {fileID: 1055892893}

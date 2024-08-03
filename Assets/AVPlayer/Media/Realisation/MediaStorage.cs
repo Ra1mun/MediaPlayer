@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using AVPlayer.UI.Preview;
 using RenderHeads.Media.AVProVideo;
 using UnityEngine;
 
@@ -9,10 +10,13 @@ namespace AVPlayer.Media
 
     public class MediaStorage : ScriptableObject
     {
+        public PreviewView PreviewPrefab => _previewPrefab;
+        
         private readonly Dictionary<string, MediaReference> _mediaStorage = new Dictionary<string, MediaReference>();
         private readonly Dictionary<string, Sprite> _previewStorage = new Dictionary<string, Sprite>();
 
         [SerializeField] private MediaFile[] _mediaFiles;
+        [SerializeField] private PreviewView _previewPrefab;
     
         [NonSerialized] private bool _isInit;
     

@@ -38,6 +38,7 @@ namespace AVPlayer.Media
             
             _mediaPlayer.OpenMedia(video, false);
             VideoLoaded?.Invoke();
+            SetStateVideo(false);
             return true;
         }
 
@@ -77,6 +78,7 @@ namespace AVPlayer.Media
         {
             if (_mediaPlayer.Control.IsFinished())
             {
+                SetStateVideo(false);
                 VideoEnded?.Invoke();
             }
         }

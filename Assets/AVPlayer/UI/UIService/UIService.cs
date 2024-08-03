@@ -22,6 +22,8 @@ namespace AVPlayer.UI.UIService
         {
             _instantiator = instantiator;
             _uiRoot = uiRoot;
+
+            LoadComponents();
         }
 
         public void LoadComponents()
@@ -35,12 +37,12 @@ namespace AVPlayer.UI.UIService
             InitComponents();
         }
 
-        public void Show<T>() where T : UIDisplayComponent
+        public T Show<T>() where T : UIDisplayComponent
         {
             var t = typeof(T);
             if (!_initViews.ContainsKey(t))
             {
-                return;
+                return null;
             }
 
             var view = _initViews[t];
@@ -52,6 +54,8 @@ namespace AVPlayer.UI.UIService
             view.transform.localScale = Vector3.one;
             
             viewComponent.Show();
+
+            return viewComponent;
         }
         
         public void Hide<T>() where T : UIDisplayComponent
@@ -74,12 +78,12 @@ namespace AVPlayer.UI.UIService
         {
             if (_initViews.ContainsKey(typeof(T)))
             {
-                var t = typeof(T);
-                var view = _initViews[t];
-
+                var view = _initViews[typeof(T)];
+                Debug.Log("get");
                 return view.GetComponent<T>();
             }
-
+            
+            Debug.Log("dont get");
             return null;
         }
         

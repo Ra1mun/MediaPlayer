@@ -2,32 +2,35 @@ using System;
 using AVPlayer.Media;
 using AVPlayer.UI.Interfaces;
 using AVPlayer.UI.UIService;
+using AVPlayer.UI.UIService.Interfaces;
+using UnityEngine;
 
 namespace AVPlayer.UI.Playback
 {
     public class PlaybackController : IDisplayController
     {
-        private readonly PlaybackView _playbackView;
-        private readonly UIService.UIService _uiService;
+        private readonly IUIService _uiService;
         private readonly MediaController _mediaController;
+        
+        private PlaybackView _playbackView;
 
         public PlaybackController(
-            UIService.UIService uiService,
+            IUIService uiService,
             MediaController mediaController)
         {
             _uiService = uiService;
             _mediaController = mediaController;
-
-            _playbackView = _uiService.Get<PlaybackView>();
         }
         
         public void ShowComponent()
         {
+            _playbackView = _uiService.Get<PlaybackView>();
+            
             _playbackView.OnPlayButtonClickEvent += PlayClicked;
             _playbackView.OnPauseButtonClickEvent += PauseClicked;
 
-            _mediaController.VideoLoaded += PauseClicked;
-            _mediaController.VideoEnded += PauseClicked;
+            _mediaController.VideoLoaded += PauseWithoutNotification;
+            _mediaController.VideoEnded += PauseWithoutNotification;
             
             _uiService.Show<PlaybackView>();
         }
@@ -40,6 +43,11 @@ namespace AVPlayer.UI.Playback
         private void PauseClicked()
         {
             _mediaController.StopVideo();
+        }
+
+        private void PauseWithoutNotification()
+        {
+            _playbackView.SetPauseWithoutNotification();
         }
 
         public void HideComponent()

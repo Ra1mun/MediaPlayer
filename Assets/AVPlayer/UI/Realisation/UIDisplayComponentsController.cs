@@ -6,7 +6,7 @@ using AVPlayer.UI.UIService;
 
 namespace AVPlayer.UI.Realisation
 {
-    public class UIDisplayComponentsController : IDisplayComponentsController
+    public class UIDisplayComponentsController
     {
         private readonly List<IDisplayController> _controllers = new List<IDisplayController>();
         
@@ -16,6 +16,7 @@ namespace AVPlayer.UI.Realisation
         {
             Setup(playlistController);
             Setup(playbackController);
+            
         }
 
         private void Setup(IDisplayController displayController)
