@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace AVPlayer.UI.Preview
 {
-    public class PreviewView : MonoBehaviour, IPreviewView
+    public class PreviewView : MonoBehaviour
     {
         public Action<string> OnSelectButtonClickEvent;
         
