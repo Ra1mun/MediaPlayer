@@ -2,41 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc7ef063-1010-4335-8d10-ded942c9c2dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IDisplayComponentsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IDisplayComponentsController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IDisplayRoot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IDisplayRoot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IPreviewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IPreviewController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IPreviewView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IPreviewView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IUIRoot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IUIRoot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IUIService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IUIService.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/Display.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/Display/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/Media/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/Media/Interfaces/IMediaController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/Media/Interfaces/IMediaController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/Media/Interfaces/IMediaStorage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/Media/Interfaces/IMediaStorage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Interfaces/IPreviewView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Interfaces/IPreviewView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Realisation/PreviewFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Realisation/PreviewFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MediaPlayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MediaPlayer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/Application/ApplicationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Application/ApplicationInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/Application/ApplicationStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Application/ApplicationStartup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/Camera/CameraView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Camera/CameraView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/Media/Installer/MediaInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Media/Installer/MediaInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/Media/Realisation/MediaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Media/Realisation/MediaController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Installer/UIServiceInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Installer/UIServiceInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playback/PlaybackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playback/PlaybackController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playlist/PlaylistController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playlist/PlaylistController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Preview/PreviewBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Preview/PreviewController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Preview/PreviewBuilder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Preview/PreviewController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Preview/PreviewView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Preview/PreviewView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/Media/Realisation/MediaFile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Media/Realisation/MediaFile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/Media/Realisation/MediaStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Media/Realisation/MediaStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/Media/Resources/MediaStorage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Media/Resources/MediaStorage.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IDisplayComponentsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IDisplayComponentsController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IDisplayRoot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Interfaces/IDisplayRoot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Interfaces/IPreviewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Interfaces/IPreviewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Realisation/PreviewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Realisation/PreviewBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Realisation/PreviewController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Realisation/PreviewBuilder.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Realisation/PreviewView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Realisation/UIPreviewView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Realisation/PreviewView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Realisation/UIPreviewView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Resources/PreviewView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Preview/Resources/PreviewView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Display.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Display/DisplayRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Display/DisplayRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Display/DisplayRoot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/Display/DisplayRoot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playback/PlaybackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playback/UIPlaybackComponentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playback/PlaybackController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playback/UIPlaybackComponentController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playback/PlaybackView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playback/UIPlaybackView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playback/PlaybackView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playback/UIPlaybackView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playlist/PlaylistController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playlist/UIPlaylistComponentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playlist/PlaylistController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playlist/UIPlaylistComponentController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playlist/PlaylistView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playlist/UIPlaylistView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playlist/PlaylistView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Playlist/UIPlaylistView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/UIDisplayComponentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/UIDisplayComponentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/UIRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/UIRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/UIRoot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/UIRoot.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/VideoDisplay.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Display.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/VideoDisplay/DisplayRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Display/DisplayRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/VideoDisplay/DisplayRoot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Realisation/Display/DisplayRoot.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/IDisplayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IDisplayController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/IDisplayController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IDisplayController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/UIPlayerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/UIService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/UIPlayerService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/UIService.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MediaPlayer.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MediaPlayer.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Resources/UIDisplayComponents/PlaybackButtons.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Resources/UIDisplayComponents/PlaybackButtons.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Resources/UIDisplayComponents/Playlist.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Resources/UIDisplayComponents/Playlist.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Resources/UIDisplayComponents/PreviewView.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Resources/UIDisplayComponents/PreviewView.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/Resources/UIRoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/Resources/UIRoot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Installer/UIServiceInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Installer/UIServiceInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IDisplayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IDisplayComponentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IDisplayController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IDisplayComponentController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IUIRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IUIRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IUIService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/Interfaces/IUIService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/UIRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/UIRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/UIService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AVPlayer/UI/UIService/UIService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +70,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -103,6 +126,7 @@
       <workItem from="1722508055955" duration="7269000" />
       <workItem from="1722584999004" duration="16203000" />
       <workItem from="1722686735462" duration="5323000" />
+      <workItem from="1722751980250" duration="6578000" />
     </task>
     <servers />
   </component>
