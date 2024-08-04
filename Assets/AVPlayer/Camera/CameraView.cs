@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraView : MonoBehaviour
+namespace AVPlayer.Camera
 {
-    [SerializeField] private Camera _camera;
+    public class CameraView : MonoBehaviour
+    {
+        [SerializeField] private UnityEngine.Camera _camera;
 
-    public Camera Camera => _camera;
+        public UnityEngine.Camera Camera => _camera;
+    }
 }

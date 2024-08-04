@@ -1,13 +1,12 @@
-using AVPlayer.UI.Interfaces;
-using AVPlayer.UI.Playback;
-using AVPlayer.UI.Playlist;
-using AVPlayer.UI.Preview;
-using AVPlayer.UI.Realisation;
-using AVPlayer.UI.UIService;
-using AVPlayer.UI.UIService.Interfaces;
 using Zenject;
+using AVPlayer.UI.Preview.Interfaces;
+using AVPlayer.UI.Preview.Realisation;
+using AVPlayer.UI.Realisation;
+using AVPlayer.UI.Realisation.Playback;
+using AVPlayer.UI.Realisation.Playlist;
+using AVPlayer.UI.UIService.Interfaces;
 
-namespace AVPlayer.UI.Installer
+namespace AVPlayer.UI.UIService.Installer
 {
     public class UIServiceInstaller : Installer<UIServiceInstaller>
     {
@@ -21,20 +20,20 @@ namespace AVPlayer.UI.Installer
             
             Container
                 .Bind<IUIService>()
-                .To<UIService.UIService>()
+                .To<UI.UIService.UIService>()
                 .AsSingle();
             
             Container
                 .Bind<IPreviewController>()
-                .To<PreviewController>()
+                .To<PreviewBuilder>()
                 .AsSingle();
 
             Container
-                .Bind<PlaybackController>()
+                .Bind<UIPlaybackComponentController>()
                 .AsSingle();
 
             Container
-                .Bind<PlaylistController>()
+                .Bind<UIPlaylistComponentController>()
                 .AsSingle();
 
             Container

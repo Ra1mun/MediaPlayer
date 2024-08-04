@@ -2,7 +2,7 @@
 using RenderHeads.Media.AVProVideo;
 using UnityEngine;
 
-namespace AVPlayer.Media
+namespace AVPlayer.Media.Realisation
 {
     [Serializable]
     public class MediaFile

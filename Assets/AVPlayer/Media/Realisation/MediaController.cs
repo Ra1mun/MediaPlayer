@@ -3,54 +3,68 @@ using System.Linq;
 using RenderHeads.Media.AVProVideo;
 using UnityEngine;
 using Zenject;
+using AVPlayer.Media.Interfaces;
+using AVPlayer.UI.UIService.Interfaces;
 
-namespace AVPlayer.Media
+namespace AVPlayer.Media.Realisation
 {
-    public class MediaController : ITickable
+    public class MediaController : ITickable, IMediaController
     {
-        public Action VideoLoaded;
-        public Action VideoEnded;
+        public Action VideoLoaded { get; set; }
+        public Action VideoEnded { get; set; }
         
         private readonly MediaPlayer _mediaPlayer;
-        private readonly MediaStorage _mediaStorage;
+        private readonly IMediaStorage _mediaStorage;
+        private readonly IUIRoot _uiRoot;
         private readonly TickableManager _tickableManager;
 
         private bool _isActive;
 
         public MediaController(
             MediaPlayer mediaPlayer,
-            MediaStorage mediaStorage,
+            IMediaStorage mediaStorage,
+            IUIRoot uiRoot,
             TickableManager tickableManager)
         {
             _mediaPlayer = mediaPlayer;
             _mediaStorage = mediaStorage;
+            _uiRoot = uiRoot;
             _tickableManager = tickableManager;
         }
-        
-        public bool TryToLoadVideo(string videoName, bool autoPlay = false)
+
+        public bool TryToLoadVideo(string mediaName, bool autoPlay = false)
         {
-            var video = _mediaStorage.GetVideo(videoName);
+            if (string.IsNullOrWhiteSpace(mediaName))
+            {
+                Debug.LogError("Data of video didn't receive");
+            }
+            
+            var video = _mediaStorage.GetVideo(mediaName);
             if (video == null)
             {
-                Debug.LogError($"Video with name: {videoName} didn't found!");
+                Debug.LogError($"Video with name: {mediaName} didn't found!");
                 return false;
             }
             
             _mediaPlayer.OpenMedia(video, autoPlay);
-            if (!autoPlay)
+            _uiRoot.Display.MediaHeaderText = mediaName;
+            if (autoPlay)
             {
-                VideoLoaded?.Invoke();
-                SetStateVideo(false);
+                return true;
             }
+            
+            VideoLoaded?.Invoke();
+            SetStateVideo(false);
             return true;
         }
 
         public void PlayVideo()
         {
-            if (_mediaPlayer.MediaReference == null)
+            if (_mediaPlayer.MediaReference == null && !TryToLoadVideo(_mediaStorage.GetNames().First(), true))
             {
-                TryToLoadVideo(_mediaStorage.GetNames().First(), true);
+                return;
             }
+            
             SetStateVideo(true);
             
             _mediaPlayer.Play();
@@ -65,12 +79,12 @@ namespace AVPlayer.Media
         
         private void SetStateVideo(bool isRunning)
         {
-            if (isRunning)
+            if (isRunning && !_isActive)
             {
                 _tickableManager.Add(this);
                 _isActive = true;
             }
-            else
+            else if(!isRunning && _isActive)
             {
                 _tickableManager.Remove(this);
                 _isActive = false;

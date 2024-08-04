@@ -1,24 +1,29 @@
-using AVPlayer.Media;
 using RenderHeads.Media.AVProVideo;
 using Zenject;
+using AVPlayer.Media.Interfaces;
+using AVPlayer.Media.Realisation;
 
-public class MediaInstaller : Installer<MediaInstaller>
+namespace AVPlayer.Media.Installer
 {
-    public override void InstallBindings()
+    public class MediaInstaller : Installer<MediaInstaller>
     {
-        Container
-            .Bind<MediaPlayer>()
-            .FromComponentInNewPrefabResource(nameof(MediaPlayer))
-            .AsSingle();
+        public override void InstallBindings()
+        {
+            Container
+                .Bind<MediaPlayer>()
+                .FromComponentInNewPrefabResource(nameof(MediaPlayer))
+                .AsSingle();
         
-        Container
-            .Bind<MediaStorage>()
-            .FromScriptableObjectResource(nameof(MediaStorage))
-            .AsSingle();
+            Container
+                .Bind<IMediaStorage>()
+                .To<MediaStorage>()
+                .FromScriptableObjectResource(nameof(MediaStorage))
+                .AsSingle();
         
-        Container
-            .Bind<MediaController>()
-            .AsSingle()
-            .NonLazy();
+            Container
+                .Bind<IMediaController>()
+                .To<MediaController>()
+                .AsSingle();
+        }
     }
 }

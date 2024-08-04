@@ -1,7 +1,7 @@
-using AVPlayer.Media;
-using AVPlayer.UI.Installer;
-using UnityEngine;
 using Zenject;
+using AVPlayer.Camera;
+using AVPlayer.Media.Installer;
+using AVPlayer.UI.UIService.Installer;
 
 namespace AVPlayer.Application
 {

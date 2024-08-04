@@ -1,11 +1,11 @@
 using System;
-using AVPlayer.UI.UIService;
 using UnityEngine;
 using UnityEngine.UI;
+using AVPlayer.UI.UIService;
 
-namespace AVPlayer.UI.Playback
+namespace AVPlayer.UI.Realisation.Playback
 {
-    public class PlaybackView : UIDisplayComponent
+    public class UIPlaybackView : UIDisplayComponent
     {
         public Action OnPlayButtonClickEvent;
         public Action OnPauseButtonClickEvent;

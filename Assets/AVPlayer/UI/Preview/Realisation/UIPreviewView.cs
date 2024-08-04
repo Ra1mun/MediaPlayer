@@ -1,27 +1,20 @@
 ﻿using System;
-using AVPlayer.UI.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using AVPlayer.UI.Preview.Interfaces;
 
-namespace AVPlayer.UI.Preview
+namespace AVPlayer.UI.Preview.Realisation
 {
-    public class PreviewView : MonoBehaviour
+    public class UIPreviewView : MonoBehaviour, IPreviewView
     {
-        public Action<string> OnSelectButtonClickEvent;
-        
-        [SerializeField] private Button _selectButton;
-        [SerializeField] private TMP_Text _previewText;
+        public Action<string> OnSelectButtonClickEvent { get; set; }
 
-        public Image PreviewImage
-        {
-            get => _selectButton.image;
-            set => _selectButton.image = value;
-        }
+        public RectTransform Origin => _origin;
+        public Image PreviewImage => _selectButton.image;
 
         public string PreviewText
         {
-            get => _previewText.text;
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
@@ -32,7 +25,11 @@ namespace AVPlayer.UI.Preview
                 _previewText.text = value;
             }
         }
-
+        
+        [SerializeField] private RectTransform _origin;
+        [SerializeField] private Button _selectButton;
+        [SerializeField] private TMP_Text _previewText;
+        
         private void OnEnable()
         {
             _selectButton.onClick.AddListener(OnSelectButtonClick);

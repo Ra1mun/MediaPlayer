@@ -1,22 +1,18 @@
-using System;
-using AVPlayer.Media;
-using AVPlayer.UI.Interfaces;
-using AVPlayer.UI.UIService;
+using AVPlayer.Media.Interfaces;
 using AVPlayer.UI.UIService.Interfaces;
-using UnityEngine;
 
-namespace AVPlayer.UI.Playback
+namespace AVPlayer.UI.Realisation.Playback
 {
-    public class PlaybackController : IDisplayController
+    public class UIPlaybackComponentController : IDisplayComponentController
     {
         private readonly IUIService _uiService;
-        private readonly MediaController _mediaController;
+        private readonly IMediaController _mediaController;
         
-        private PlaybackView _playbackView;
+        private UIPlaybackView _uiPlaybackView;
 
-        public PlaybackController(
+        public UIPlaybackComponentController(
             IUIService uiService,
-            MediaController mediaController)
+            IMediaController mediaController)
         {
             _uiService = uiService;
             _mediaController = mediaController;
@@ -24,15 +20,15 @@ namespace AVPlayer.UI.Playback
         
         public void ShowComponent()
         {
-            _playbackView = _uiService.Get<PlaybackView>();
+            _uiPlaybackView = _uiService.Get<UIPlaybackView>();
             
-            _playbackView.OnPlayButtonClickEvent += PlayClicked;
-            _playbackView.OnPauseButtonClickEvent += PauseClicked;
+            _uiPlaybackView.OnPlayButtonClickEvent += PlayClicked;
+            _uiPlaybackView.OnPauseButtonClickEvent += PauseClicked;
 
             _mediaController.VideoLoaded += PauseWithoutNotification;
             _mediaController.VideoEnded += PauseWithoutNotification;
             
-            _uiService.Show<PlaybackView>();
+            _uiService.Show<UIPlaybackView>();
         }
 
         private void PlayClicked()
@@ -47,18 +43,18 @@ namespace AVPlayer.UI.Playback
 
         private void PauseWithoutNotification()
         {
-            _playbackView.SetPauseWithoutNotification();
+            _uiPlaybackView.SetPauseWithoutNotification();
         }
 
         public void HideComponent()
         {
-            _playbackView.OnPlayButtonClickEvent -= PlayClicked;
-            _playbackView.OnPauseButtonClickEvent -= PauseClicked;
+            _uiPlaybackView.OnPlayButtonClickEvent -= PlayClicked;
+            _uiPlaybackView.OnPauseButtonClickEvent -= PauseClicked;
             
             _mediaController.VideoLoaded -= PauseClicked;
             _mediaController.VideoEnded -= PauseClicked;
             
-            _uiService.Hide<PlaybackView>();
+            _uiService.Hide<UIPlaybackView>();
         }
 
         

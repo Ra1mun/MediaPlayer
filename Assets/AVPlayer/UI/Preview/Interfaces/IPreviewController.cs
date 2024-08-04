@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using AVPlayer.UI.Preview;
+﻿using System.Collections.Generic;
 
-namespace AVPlayer.UI.Interfaces
+namespace AVPlayer.UI.Preview.Interfaces
 {
     public interface IPreviewController
     {
-        public IEnumerable<PreviewView> GetAllPreviews();
-        public IEnumerable<PreviewView> GetPreviewsByCount(int count);
+        public IEnumerable<IPreviewView> GetAllPreviews();
+        public IEnumerable<IPreviewView> GetPreviewsByCount(int count);
     }
 }

@@ -1,30 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using AVPlayer.Media;
-using AVPlayer.UI.Interfaces;
-using AVPlayer.UI.Preview;
-using AVPlayer.UI.Realisation;
-using AVPlayer.UI.UIService;
-using AVPlayer.UI.UIService.Interfaces;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using AVPlayer.Media.Interfaces;
+using AVPlayer.UI.Preview.Interfaces;
+using AVPlayer.UI.UIService.Interfaces;
 
-namespace AVPlayer.UI.Playlist
+namespace AVPlayer.UI.Realisation.Playlist
 {
-    public class PlaylistController : IDisplayController
+    public class UIPlaylistComponentController : IDisplayComponentController
     {
-        private readonly List<PreviewView> _mediaViews = new List<PreviewView>();
+        private readonly List<IPreviewView> _mediaViews = new List<IPreviewView>();
 
         private readonly IUIService _uiService;
         private readonly IPreviewController _previewController;
-        private readonly MediaController _mediaController;
+        private readonly IMediaController _mediaController;
         
-        private PlaylistView _playlistView;
+        private UIPlaylistView _uiPlaylistView;
 
 
-        public PlaylistController(
+        public UIPlaylistComponentController(
             IUIService uiService,
             IPreviewController previewController,
-            MediaController mediaController)
+            IMediaController mediaController)
         {
             _uiService = uiService;
             _previewController = previewController;
@@ -33,25 +29,25 @@ namespace AVPlayer.UI.Playlist
         
         public void ShowComponent()
         {
-            _playlistView = _uiService.Get<PlaylistView>();
+            _uiPlaylistView = _uiService.Get<UIPlaylistView>();
             
             foreach (var preview in _previewController.GetAllPreviews())
             {
                 AddPreview(preview);
             }
             
-            _uiService.Show<PlaylistView>();
+            _uiService.Show<UIPlaylistView>();
         }
 
-        private void AddPreview(PreviewView view)
+        private void AddPreview(IPreviewView view)
         {
             
             view.OnSelectButtonClickEvent += SelectVideo;
             
-            view.transform.SetParent(_playlistView.PreviewContainer);
-            view.transform.localPosition = Vector3.zero;
-            view.transform.localRotation = Quaternion.identity;
-            view.transform.localScale = Vector3.one;
+            view.Origin.SetParent(_uiPlaylistView.PreviewContainer);
+            view.Origin.localPosition = Vector3.zero;
+            view.Origin.localRotation = Quaternion.identity;
+            view.Origin.localScale = Vector3.one;
             
             _mediaViews.Add(view);
         }
@@ -63,7 +59,7 @@ namespace AVPlayer.UI.Playlist
                 return;
             }
             
-            _playlistView.ClosePlaylist();
+            _uiPlaylistView.ClosePlaylist();
         }
 
         public void HideComponent()
@@ -75,7 +71,7 @@ namespace AVPlayer.UI.Playlist
             
             _mediaViews.Clear();
             
-            _uiService.Hide<PlaylistView>();
+            _uiService.Hide<UIPlaylistView>();
         }
     }
 }

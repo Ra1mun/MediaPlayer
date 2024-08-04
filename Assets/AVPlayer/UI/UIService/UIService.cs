@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using AVPlayer.UI.Interfaces;
-using AVPlayer.UI.Realisation;
-using AVPlayer.UI.UIService.Interfaces;
 using UnityEngine;
 using Zenject;
+using AVPlayer.UI.UIService.Interfaces;
 
 namespace AVPlayer.UI.UIService
 {
@@ -26,7 +24,7 @@ namespace AVPlayer.UI.UIService
             LoadComponents();
         }
 
-        public void LoadComponents()
+        private void LoadComponents()
         {
             var components = Resources.LoadAll<UIDisplayComponent>("UIDisplayComponents");
             foreach (var component in components)
@@ -79,11 +77,9 @@ namespace AVPlayer.UI.UIService
             if (_initViews.ContainsKey(typeof(T)))
             {
                 var view = _initViews[typeof(T)];
-                Debug.Log("get");
                 return view.GetComponent<T>();
             }
             
-            Debug.Log("dont get");
             return null;
         }
         

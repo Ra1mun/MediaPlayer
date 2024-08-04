@@ -27,4 +27,4 @@ MonoBehaviour:
     _name: "\u0421\u0432\u0438\u043D\u043A\u0430 \u041F\u0435\u043F\u043F\u0430 18.
       \u0414\u0435\u043D\u044C \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F \u043C\u0430\u043C\u044B
       \u0421\u0432\u0438\u043D\u043A\u0438"
-  _previewPrefab: {fileID: 3058119865289197844, guid: 97c1ea57157b6a641bb92774d7cef27f, type: 3}
+  _uiPreviewPrefab: {fileID: 3058119865289197844, guid: 97c1ea57157b6a641bb92774d7cef27f, type: 3}
