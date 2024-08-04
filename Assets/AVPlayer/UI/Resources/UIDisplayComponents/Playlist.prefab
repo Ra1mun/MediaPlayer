@@ -174,7 +174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f04df485ec89c94419701dc46ecd6eaa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bbbe7c61f448cff45a3eedb1d93d4584, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -668,7 +668,6 @@ MonoBehaviour:
   _openPlaylist: {fileID: 2960505014081403226}
   _previewContainer: {fileID: 6341525199707470616}
   _playlistContainer: {fileID: 8281774513277324629}
-  _currentMediaHeader: {fileID: 2244620729805834487}
 --- !u!1 &5833336130845182034
 GameObject:
   m_ObjectHideFlags: 0
